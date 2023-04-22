@@ -14,6 +14,7 @@ public class Main {
         location.x=5;
         int result= 2+4;
         System.out.println(result);
+        System.out.println(result + 2);
         System.out.println(location2);
       System.out.println(numViews);
         System.out.println(name);
