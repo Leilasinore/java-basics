@@ -56,10 +56,57 @@ public class Main {
         Byte age =scanner.nextByte();
         System.out.println("You are " + age + " years old");
 
+        //task
+        //building a mortgage calculator
+        Scanner principalInput= new Scanner(System.in);
+        System.out.print("Principal : ");
+        double principal=principalInput.nextDouble();
+        //get annual interest rate from user
+        Scanner interestRateInput=new Scanner(System.in);
+        System.out.print("Annual Interest Rate : ");
+        double interest=interestRateInput.nextDouble();
+        //get period in years
+        Scanner period=new Scanner(System.in);
+        System.out.println("Period : ");
+        double periodInYears=period.nextDouble();
+
+        //convert interest rate to monthly
+        double monthlyRate= interest/1200;
+        double numberOfPayments= periodInYears *12 ;
+//        double result1cal= (1+monthlyRate);
+        double mortgage= ((Math.pow((1+monthlyRate),numberOfPayments) *monthlyRate)/((Math.pow((1+monthlyRate),numberOfPayments))-1))*principal;
 
 
+        //format output
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.println(mortgageFormatted);
 
+        //conditional statements:if statements
+        int temperature=32;
 
+        if (temperature==32){
+            System.out.println("It is a hot day drink plenty of water");
+        } else if (temperature<32) {
+            System.out.println("It is a cold day please keep warm");
+        } else System.out.println("it is a lukwarm day");
+
+        //ternary operator
+        int income = 100_000;
+        String className= income > 10_000 ? "first": "Economy";
+        System.out.println(className);
+
+        //switch statements
+        String role ="admin";
+        switch (role){
+            case "admin":
+                System.out.println("you are an admin");
+                break;
+            case "moderator":
+                System.out.println("you are a moderator");
+                break;
+            default:
+                System.out.println("you are a guest");
+        }
 
     }
 }
