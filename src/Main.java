@@ -100,6 +100,7 @@ public class Main {
         switch (role){
             case "admin":
                 System.out.println("you are an admin");
+                int num5=456;
                 break;
             case "moderator":
                 System.out.println("you are a moderator");
@@ -107,6 +108,22 @@ public class Main {
             default:
                 System.out.println("you are a guest");
         }
+        //FizzBuzz Exercise
+        Scanner randomInput = new Scanner(System.in);
+        int userInput=randomInput.nextByte();
+        int modResult= userInput % 5;
+        int modResult2= userInput % 3;
+        if(modResult==0){
+            System.out.println("Fizz");
+        }
+        else if (modResult2==0) {
+            System.out.println("Buzz");
+        }
+        else if (modResult2==0 && modResult==0) {
+            System.out.println("FizzBuzz");
+        }
+        else System.out.println(userInput);
+
 
     }
 }
