@@ -113,14 +113,15 @@ public class Main {
         int userInput=randomInput.nextByte();
         int modResult= userInput % 5;
         int modResult2= userInput % 3;
-        if(modResult==0){
+
+        if (modResult2==0 && modResult==0) {
+            System.out.println("FizzBuzz");
+        }
+        else if(modResult==0){
             System.out.println("Fizz");
         }
         else if (modResult2==0) {
             System.out.println("Buzz");
-        }
-        else if (modResult2==0 && modResult==0) {
-            System.out.println("FizzBuzz");
         }
         else System.out.println(userInput);
 
