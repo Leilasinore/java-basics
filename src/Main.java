@@ -125,6 +125,11 @@ public class Main {
         }
         else System.out.println(userInput);
 
+        //loops;for loop
+        for(int i=0;i<5;i++){
+            System.out.println("You are on number" + i);
+        }
+        //while loop
 
     }
 }
