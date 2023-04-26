@@ -2,12 +2,53 @@ import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
+ interface Animal{
+    //All methods within an interface class have to be empty, ie without a body
+      public void animalSound();
+     public void feeding();
+
+}
+class Cow implements Animal{
+    //The subclass in this case class Cow has to override all the methods from its parent class animal
+     public void  animalSound(){
+        System.out.println("a cow mows mows");
+    }
+    public void feeding(){
+        System.out.println("a cow eats grass");
+    }
+}
+
+class Human{
+    private int age;
+    private String name;
+
+    public void setAge(int a){
+        age=a;
+    }
+    public void setName(String n){
+        name=n;
+    }
+    public int getAge(){
+        return age;
+    }
+    public String getName(){
+        return name;
+    }
+
+}
+
 class Calculator {
     public int add(int number1, int number2){
         System.out.println("We are adding numbers");
         int r =number1 + number2;
         System.out.println(r);
         return r;
+    }
+    public int sub(int number3, int number4){
+        System.out.println("We are subtracting numbers");
+        int r2=number3-number4;
+        System.out.println(r2);
+        return r2;
     }
 }
 
@@ -183,8 +224,46 @@ public class Main {
 //        }
 //
 //        System.out.println("Enter a number between 1,000 and 1000000");
-        Calculator calc= new Calculator();
-        int resultanwer= calc.add(2,3);
+//        Calculator calc= new Calculator();
+//        int resultanwer= calc.add(2,3);
+//
+//        Demoagain obj =new Demoagain();
+//        public void Demoagain(){
+//            Calculator calc =new Calculator();
+//            int resultofadd=calc.add(7,8);
+//            System.out.println(resultofadd);
+//
+//            int resultofsub=calc.sub(12,6);
+//            System.out.println(resultofadd +" "+ resultofsub);
+//
+//            public int add(int number1, int number2){
+//                System.out.println("We are adding numbers");
+//                int r =number1 + number2;
+//                System.out.println(r);
+//                return r;
+//            }
+//        Demoagain addupagain =new Demoagain();
+//        addupagain.addnum(28,32);
+//
+//
+        Demoagaincalc obj2=new Demoagaincalc();
+        obj2.divideagain(20,10);
+        obj2.multiplyagain(20,4);
+        obj2.addnum(28,32);
+        obj2.subnum(80,10);
 
-    }
+        Human obj3= new Human();
+        obj3.setAge(22);
+        obj3.setName("Entito");
+        System.out.println(obj3.getAge()+ " " + obj3.getName());
+
+        Car newcar= new Car();
+        newcar.drive();
+
+        Cow myCow =new Cow();
+        myCow.feeding();
+        myCow.animalSound();
+
+
+  }
 }
